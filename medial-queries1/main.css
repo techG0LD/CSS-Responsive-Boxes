@@ -1,3 +1,46 @@
 body {
   background: blanchedalmond;
 }
+
+* {
+  border : 1px solid black;
+ 
+}
+
+.container{
+  display: flex;
+  min-height: 100vh; /*   default height for responsive web */
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+
+header, footer {
+  flex-grow: 1;
+ 
+    /*   this creates white space between containers */
+}
+
+main{
+  flex-grow: 3;
+
+}
+
+
+
+
+@media(min-width: 600px){   /*   change css rules when  */
+  .container{
+    flex-direction:row;
+    flex-wrap:wrap;
+  }
+
+  header {
+    width: 100%;
+
+  }
+
+  main,footer,header{
+    margin:1em;
+  }
+}
